@@ -4,11 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Xenia</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 </head>
 <body>
     <h1>Xenia Levantis: Data Science project <title></title></h1>
-    <p> This is my draft page for week one.
-    </p>
+    <h3>Figure one </h3>
+    <p>My first chart is a live an interactive chart running from offical data.</p>
+    <div class="chart" id="firstChart">
+        <script>
+          // Following the script tag we are using Javascript.
+          // One way to tell is to see how comments work...
+          // First job is to set the chart as a JS variable:
+          var myChart1 = "chart1_covidUKRegions.json";
+          // Now we simply insert it, using Vega's embed code:
+          // The embed function needs to be told the location, and what to put there. 
+          vegaEmbed('#firstChart', myChart1);
+        </script>
+      </div>
+    <h3>Figure two </h3>
+    <p>My second chart looks at some other interesting stuff.</p>
+    <div class="chart" id="secondChart">
+        <script>
+            var Chart2="chart2_ukProductivity.json";
+            vegaEmbed("#secondChart",Chart2);
+        </script>
+    </div>
 </body>
 </html>
